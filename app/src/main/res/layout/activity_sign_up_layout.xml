@@ -38,7 +38,7 @@
             android:textColorHint="#fff"
             android:layout_below="@id/edit_email"
             android:background="@drawable/rounded_rect"
-            android:id="@+id/username"/>
+            android:id="@+id/edit_username"/>
 
 
         <EditText
@@ -52,9 +52,9 @@
             android:padding="10dp"
             android:inputType="number"
             android:textColorHint="#fff"
-            android:layout_below="@id/username"
+            android:layout_below="@id/edit_username"
             android:background="@drawable/rounded_rect"
-            android:id="@+id/mobile_no"/>
+            android:id="@+id/edit_mobile_no"/>
 
 
         <EditText
@@ -67,9 +67,9 @@
             android:layout_marginLeft="30dp"
             android:padding="10dp"
             android:textColorHint="#fff"
-            android:layout_below="@id/mobile_no"
+            android:layout_below="@id/edit_mobile_no"
             android:background="@drawable/rounded_rect"
-            android:id="@+id/password"/>
+            android:id="@+id/edit_password"/>
 
         <Button
             android:layout_width="match_parent"
@@ -81,7 +81,8 @@
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:background="#bc542525"
-            android:layout_below="@id/password"
+            android:layout_below="@id/edit_password"
+            android:id="@+id/signup_button"
             />
 
     </RelativeLayout>
