@@ -21,59 +21,36 @@ import org.json.JSONObject;
 public class login_layout extends AppCompatActivity {
 
     private EditText email_edit_text , password_edit_text;
-    private Button login, signup;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_layout);
-         login = (Button) findViewById(R.id.login_button);
-        signup =(Button) findViewById(R.id.signup_button);
+
 
         email_edit_text = (EditText) findViewById(R.id.email_edit_text);
        password_edit_text = (EditText) findViewById(R.id.password_edit_text);
 
-        final View.OnClickListener onbtn_click= new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(v.getId() == R.id.login_button)
-                {
-                    Intent i = new Intent(login_layout.this , main_layout.class);
 
-
-                    startActivity(i);
-
-
-                }
-
-                if (v.getId()== R.id.signup_button)
-                {
-                    Intent i = new Intent(login_layout.this , sign_up_layout.class);
-
-                    startActivity(i);
-                }
-            }
-        };
-
-        login.setOnClickListener(onbtn_click);
-        signup.setOnClickListener(onbtn_click);
     }
 
 
-    public void login()
+    public void login( View v)
     {
-        String email =email_edit_text.getText().toString();
+        String email = email_edit_text.getText().toString();
         String password = password_edit_text.getText().toString();
 
         JSONObject job = new JSONObject();
 
         try {
-            job.put("email_key", email_edit_text);
-            job.put("password_key" , password_edit_text);
+            job.put("email_key", email);
+            job.put("password_key" , password);
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        JsonObjectRequest jobreq = new JsonObjectRequest("http://192.168.0.17/login_notes_sharing.php", job, new Response.Listener<JSONObject>() {
+
+        JsonObjectRequest jobreq = new JsonObjectRequest("http://"+Internet_address.ip+"/notes_sharing/login_notes_sharing.php", job, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
@@ -117,6 +94,12 @@ public class login_layout extends AppCompatActivity {
         AppController app = new AppController(login_layout.this);
 
         app.addToRequestQueue(jobreq);
+    }
+
+    public void signup(View view) {
+
+        Intent i = new Intent(login_layout.this , sign_up_layout.class);
+        startActivity(i);
     }
 }
 

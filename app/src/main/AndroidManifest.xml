@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.karam.notes_sharing">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -17,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".sign_up_layout" />
-        <activity android:name=".main_layout"></activity>
+        <activity android:name=".main_layout" />
+        <activity android:name=".profile_edit_layout"></activity>
     </application>
 
 </manifest>

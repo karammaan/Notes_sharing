@@ -1,9 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main_layout"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ccc">
+    android:background="#ccc"
+    >
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_id">
 
-</RelativeLayout>
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        android:layout_gravity="left">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_rect"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center_horizontal"
+                    android:text="Edit Profile"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:padding="10dp"
+                    android:id="@+id/profile_edit_id"
+                    android:onClick="done"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_rect"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="Search Notes"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_rect"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="Feedback"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_rect"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="Favourite Notes"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:padding="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_rect"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="Logout"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:padding="10dp"/>
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+    </RelativeLayout>
+   </android.support.v4.widget.DrawerLayout>
+
+

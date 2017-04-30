@@ -74,7 +74,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="sign in"
+            android:text="sign up"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:padding="10dp"
@@ -82,7 +82,8 @@
             android:layout_centerHorizontal="true"
             android:background="#bc542525"
             android:layout_below="@id/edit_password"
-            android:id="@+id/signup_button"
+            android:id="@+id/signup_button_id"
+            android:onClick="register"
             />
 
     </RelativeLayout>
