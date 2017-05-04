@@ -6,5 +6,5 @@ package com.example.karam.notes_sharing;
 
 public class Internet_address {
 
-    public static String ip = "192.168.0.15";
+    public static String ip = "192.168.0.14";
 }
